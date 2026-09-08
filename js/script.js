@@ -63,6 +63,7 @@ function initActiveNav() {
   if (!navLinks.length) return;
 
   const sections = navLinks
+    .filter((link) => link.getAttribute('href').startsWith('#'))
     .map((link) => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
 
