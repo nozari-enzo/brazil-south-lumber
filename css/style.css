@@ -309,6 +309,56 @@ main > section {
 }
 .section-head p { color: var(--ink-soft); font-size: 1.05rem; }
 
+/* ---------------- banner de foto (instalações) ---------------- */
+
+.facility-banner {
+  position: relative;
+  background: var(--wood-bark);
+  line-height: 0;
+}
+.facility-banner img {
+  width: 100%;
+  height: clamp(240px, 42vw, 520px);
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+.facility-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.4rem 1.5rem;
+  background: linear-gradient(to top, rgba(20, 14, 9, 0.82), transparent);
+  line-height: 1.3;
+}
+.facility-caption p {
+  margin: 0;
+  color: var(--cream);
+  font-size: 0.95rem;
+  max-width: none;
+}
+.facility-caption strong { color: var(--wood-oak); }
+
+/* ---------------- cabeçalho de página interna (produtos/orçamento) ---------------- */
+
+.page-intro {
+  background: var(--wood-bark);
+  color: var(--cream);
+  padding: var(--gap-lg) 1.5rem 3rem;
+}
+.page-intro-inner { max-width: var(--container); margin: 0 auto; }
+.page-intro-inner h1 { color: var(--cream); margin-bottom: 0.4em; }
+.page-intro-inner p { color: #d8cfbe; font-size: 1.05rem; max-width: 54ch; }
+.breadcrumb-back {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #cabfab;
+  text-decoration: none;
+  margin-bottom: 1.2rem;
+}
+.breadcrumb-back:hover { color: var(--cream); }
+
 /* ---------------- sobre ---------------- */
 
 .about { background: var(--wood-paper); }
@@ -347,27 +397,19 @@ main > section {
   background: var(--pine);
 }
 
-.about-plank {
-  min-height: 260px;
+.about-photo-frame {
+  border: 6px solid var(--cream);
+  box-shadow: 0 10px 30px rgba(36, 26, 18, 0.18);
   border-radius: var(--radius);
-  background:
-    repeating-linear-gradient(
-      100deg,
-      var(--wood-oak) 0px, var(--wood-oak) 22px,
-      var(--wood-oak-dark) 22px, var(--wood-oak-dark) 26px
-    );
-  position: relative;
   overflow: hidden;
+  align-self: start;
 }
-.about-plank::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    100deg,
-    rgba(36,26,18,0.12) 0px, rgba(36,26,18,0.12) 2px,
-    transparent 2px, transparent 48px
-  );
+.about-photo-frame img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 55% 35%;
+  display: block;
 }
 
 /* ---------------- produtos ---------------- */
@@ -489,6 +531,24 @@ main > section {
 .differentials-list h3 { color: var(--cream); }
 .differentials-list p { color: #dbe3d3; }
 
+/* ---------------- faixa de cta ---------------- */
+
+.cta-band {
+  background: var(--wood-bark);
+  color: var(--cream);
+}
+.cta-band-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-md);
+}
+.cta-band-inner h2 { color: var(--cream); margin-bottom: 0.3em; }
+.cta-band-inner p { color: #d8cfbe; margin: 0; }
+
 /* ---------------- contato ---------------- */
 
 .contact { background: var(--wood-paper); }
@@ -517,6 +577,23 @@ main > section {
 .contact-details dd { margin: 0; color: var(--ink); }
 .contact-details a { text-decoration: none; }
 .contact-details a:hover { text-decoration: underline; }
+
+.contact-cta {
+  background: var(--pine);
+  color: var(--cream);
+  padding: 2.2rem;
+  border-radius: var(--radius);
+  align-self: start;
+  display: grid;
+  gap: 1rem;
+}
+.contact-cta h3 { color: var(--cream); margin: 0; }
+.contact-cta p { color: #dbe3d3; margin: 0; }
+.contact-cta .btn-primary {
+  background: var(--wood-oak);
+  justify-self: start;
+}
+.contact-cta .btn-primary:hover { background: var(--wood-oak-dark); }
 
 .contact-form {
   background: var(--cream);
