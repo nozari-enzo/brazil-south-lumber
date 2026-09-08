@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script src="js/script.js"></script>
 </head>
 <body>
 
@@ -23,13 +22,13 @@
 
     <nav class="main-nav" id="main-nav">
       <a href="#sobre">A serraria</a>
-      <a href="#produtos">Produtos</a>
+      <a href="produtos.html">Produtos</a>
       <a href="#servicos">Serviços</a>
       <a href="#processo">Processo</a>
       <a href="#contato">Contato</a>
     </nav>
 
-    <a href="#contato" class="btn btn-header">Pedir orçamento</a>
+    <a href="orcamento.html" class="btn btn-header">Pedir orçamento</a>
 
     <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
@@ -46,12 +45,12 @@
         <p class="hero-kicker">Serraria própria — São Francisco de Paula, RS</p>
         <h1>Da tora à obra, com a precisão que a madeira exige.</h1>
         <p class="hero-lead">
-          Cortamos, secamos e beneficiamos pinus para construção civil,
+          Cortamos, secamos e beneficiamos pinus e eucalipto para construção civil,
           marcenaria e indústria. Medida certa, prazo combinado, sem desperdício.
         </p>
         <div class="hero-actions">
-          <a href="#contato" class="btn btn-primary">Pedir orçamento</a>
-          <a href="#produtos" class="btn btn-ghost">Ver produtos</a>
+          <a href="orcamento.html" class="btn btn-primary">Pedir orçamento</a>
+          <a href="produtos.html" class="btn btn-ghost">Ver produtos</a>
         </div>
       </div>
 
@@ -79,6 +78,14 @@
     </dl>
   </section>
 
+  <!-- BANNER DA UNIDADE -->
+  <section class="facility-banner">
+    <img src="img/serraria-vista-aerea.jpg" alt="Vista aérea da unidade da Brazil South Lumber em São Francisco de Paula, RS, mostrando pátio de toras, galpões de produção e área de secagem.">
+    <div class="facility-caption">
+      <p><strong>Nossa unidade</strong> — RS-020, Km 98, São Francisco de Paula, RS. Pátio de toras, produção e secagem em um só endereço.</p>
+    </div>
+  </section>
+
   <!-- SOBRE -->
   <section class="about" id="sobre">
     <div class="about-inner">
@@ -101,49 +108,9 @@
           <li>Corte sob medida a partir de 1 m³</li>
         </ul>
       </div>
-      <div class="about-plank" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <section class="products" id="produtos">
-    <div class="section-head">
-      <h2>Produtos</h2>
-      <p>Da estrutura ao acabamento, em pinus e eucalipto.</p>
-    </div>
-
-    <div class="product-list">
-      <article class="product-row">
-        <div class="product-info">
-          <h3>Madeira serrada</h3>
-          <p>Pranchas e pranchões de pinus e eucalipto, verdes ou secos em estufa, cortados na medida do projeto.</p>
-          <span class="product-tag">Sob encomenda a partir de 1 m³</span>
-        </div>
-      </article>
-
-      <article class="product-row product-row--alt">
-        <div class="product-info">
-          <h3>Vigas e caibros</h3>
-          <p>Estrutura para telhados e mezaninos, com seções padronizadas ou cortadas sob medida para o seu projeto.</p>
-          <span class="product-tag">Bitolas de 5x5 a 15x15 cm</span>
-        </div>
-      </article>
-
-      <article class="product-row">
-        <div class="product-info">
-          <h3>Tábuas para construção civil</h3>
-          <p>Tábuas para forma, guarda-corpo e fechamento, com secagem controlada para reduzir empeno em obra.</p>
-          <span class="product-tag">Espessuras de 15 a 30 mm</span>
-        </div>
-      </article>
-
-      <article class="product-row product-row--alt">
-        <div class="product-info">
-          <h3>Madeira para paletes</h3>
-          <p>Blocos, tacos e tábuas para paletização, com volume e prazo pensados para quem embala em escala.</p>
-          <span class="product-tag">Entrega programada mensal</span>
-        </div>
-      </article>
+      <div class="about-photo-frame">
+        <img src="img/serraria-vista-aerea.jpg" alt="Galpões de produção e pátio da Brazil South Lumber vistos de cima.">
+      </div>
     </div>
   </section>
 
@@ -238,8 +205,8 @@
   <section class="contact" id="contato">
     <div class="contact-inner">
       <div class="contact-info">
-        <h2>Vamos falar sobre o seu projeto</h2>
-        <p>Conta pra gente o volume e a bitola que você precisa — respondemos com orçamento em até 1 dia útil.</p>
+        <h2>Fale com a gente</h2>
+        <p>Prefere ligar ou mandar mensagem direto? Os contatos da serraria estão aqui.</p>
 
         <dl class="contact-details">
           <div>
@@ -261,33 +228,11 @@
         </dl>
       </div>
 
-      <form class="contact-form" id="contact-form" action="enviar.php" method="POST" novalidate>
-        <div class="form-row">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" autocomplete="name" required>
-          <span class="form-error" data-error-for="nome"></span>
-        </div>
-
-        <div class="form-row">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
-          <span class="form-error" data-error-for="email"></span>
-        </div>
-
-        <div class="form-row">
-          <label for="telefone">Telefone</label>
-          <input type="tel" id="telefone" name="telefone" autocomplete="tel">
-        </div>
-
-        <div class="form-row">
-          <label for="mensagem">O que você precisa?</label>
-          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-          <span class="form-error" data-error-for="mensagem"></span>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-form">Enviar pedido</button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
+      <div class="contact-cta">
+        <h3>Precisa de um orçamento?</h3>
+        <p>Conta pra gente o volume e a bitola que você precisa — respondemos em até 1 dia útil.</p>
+        <a href="orcamento.html" class="btn btn-primary">Solicitar orçamento</a>
+      </div>
     </div>
   </section>
 
@@ -298,14 +243,15 @@
     <a href="#inicio" class="wordmark wordmark--footer">Brazil South<span>Lumber</span></a>
     <nav class="footer-nav">
       <a href="#sobre">A serraria</a>
-      <a href="#produtos">Produtos</a>
+      <a href="produtos.html">Produtos</a>
       <a href="#servicos">Serviços</a>
       <a href="#contato">Contato</a>
+      <a href="orcamento.html">Orçamento</a>
     </nav>
     <p class="footer-copy">© <span id="ano-atual">2026</span> Brazil South Lumber. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
