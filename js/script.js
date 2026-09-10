@@ -123,28 +123,43 @@ function initContactForm() {
   });
 
   form.addEventListener('submit', (event) => {
-    let isValid = true;
+    event.preventDefault();
 
+    let isValid = true;
     Object.keys(rules).forEach((name) => {
       const field = form.elements[name];
       if (field && !validateField(field)) isValid = false;
     });
 
     if (!isValid) {
-      event.preventDefault();
-      status.textContent = 'Verifique os campos destacados antes de enviar.';
       status.style.color = '#a13d2e';
+      status.textContent = 'Verifique os campos destacados antes de enviar.';
       return;
     }
 
-    // Sem back-end PHP configurado ainda: evita um POST que falharia
-    // silenciosamente e mostra confirmação ao usuário.
-    // Assim que enviar.php existir no servidor, essa parte pode ser
-    // removida para deixar o formulário enviar normalmente.
-    event.preventDefault();
-    status.style.color = '#384a2d';
-    status.textContent = 'Pedido pronto para envio. Conecte o formulário ao seu back-end PHP para concluir o envio.';
-    form.reset();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    status.style.color = '#4d4234';
+    status.textContent = 'Enviando...';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'X-Requested-With': 'XMLHttpRequest' },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        status.style.color = data.success ? '#384a2d' : '#a13d2e';
+        status.textContent = data.message;
+        if (data.success) form.reset();
+      })
+      .catch(() => {
+        status.style.color = '#a13d2e';
+        status.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+      });
   });
 }
 
