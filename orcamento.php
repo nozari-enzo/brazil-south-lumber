@@ -54,8 +54,9 @@
       </div>
 
       <form class="contact-form" id="contact-form" action="enviar.php" method="POST" novalidate>
-        <!-- campo-armadilha anti-spam: display:none impede o preenchimento automático do navegador -->
-        <div class="hp-field" aria-hidden="true">
+        <!-- campo-armadilha anti-spam: display:none impede o preenchimento automático do navegador
+             (inline, para não depender do style.css estar atualizado no cache) -->
+        <div class="hp-field" style="display: none" aria-hidden="true">
           <input type="text" name="campo_extra_kx91" tabindex="-1" autocomplete="off">
         </div>
 
