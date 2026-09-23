@@ -1,0 +1,2 @@
+# arquivos SQL não devem ser acessíveis pelo navegador
+Require all denied

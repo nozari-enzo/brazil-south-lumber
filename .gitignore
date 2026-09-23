@@ -1,2 +1,5 @@
 # dados reais de acesso ao e-mail — nunca subir pro Git
 mail-config.php
+
+# dados reais de acesso ao banco — nunca subir pro Git
+db-config.php
