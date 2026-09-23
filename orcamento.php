@@ -33,24 +33,7 @@
         <h2>Prefere falar direto?</h2>
         <p>Também atendemos por telefone e e-mail, no horário comercial.</p>
 
-        <dl class="contact-details">
-          <div>
-            <dt>Telefone / WhatsApp</dt>
-            <dd><a href="tel:+554700000000">(47) 0000-0000</a></dd>
-          </div>
-          <div>
-            <dt>E-mail</dt>
-            <dd><a href="mailto:contato@serrariabomcorte.com.br">contato@serrariabomcorte.com.br</a></dd>
-          </div>
-          <div>
-            <dt>Endereço</dt>
-            <dd>RS-020, Km 98 - 3025 - Industrial<br>São Francisco de Paula - RS, 95400-000</dd>
-          </div>
-          <div>
-            <dt>Horário</dt>
-            <dd>Segunda a sexta, 7h30 às 17h30</dd>
-          </div>
-        </dl>
+        <?php include 'contato-detalhes.php'; ?>
       </div>
 
       <form class="contact-form" id="contact-form" action="enviar.php" method="POST" novalidate>

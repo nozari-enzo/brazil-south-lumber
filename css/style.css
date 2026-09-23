@@ -159,6 +159,11 @@ a { color: inherit; }
 }
 .wordmark span { color: var(--wood-oak); }
 
+/* logo em imagem (quando definida em empresa.php) */
+.site-logo { margin-right: auto; display: flex; align-items: center; }
+.site-logo img { height: 44px; width: auto; display: block; }
+.site-logo--footer { margin-right: var(--gap-md); }
+
 .main-nav {
   display: none;
   gap: var(--gap-md);
