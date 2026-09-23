@@ -1,3 +1,17 @@
+<?php
+// produtos.php
+// Lista os produtos ativos cadastrados na tabela "produtos" do banco.
+require __DIR__ . '/db.php';
+
+try {
+    $produtos = conectarBanco()
+        ->query('SELECT nome, descricao, destaque FROM produtos WHERE ativo = 1 ORDER BY ordem, id')
+        ->fetchAll();
+} catch (Throwable $e) {
+    error_log('produtos.php: falha ao carregar produtos: ' . $e->getMessage());
+    $produtos = [];
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,39 +42,25 @@
 
   <!-- PRODUTOS -->
   <section class="products">
+    <?php if (empty($produtos)): ?>
+    <p class="product-empty">
+      Nosso catálogo está sendo atualizado. <a href="orcamento.php">Fale com a gente</a> e conte o que você precisa.
+    </p>
+    <?php else: ?>
     <div class="product-list">
-      <article class="product-row">
+      <?php foreach ($produtos as $i => $produto): ?>
+      <article class="product-row<?= $i % 2 === 1 ? ' product-row--alt' : '' ?>">
         <div class="product-info">
-          <h3>Madeira serrada</h3>
-          <p>Pranchas e pranchões de pinus e eucalipto, verdes ou secos em estufa, cortados na medida do projeto.</p>
-          <span class="product-tag">Sob encomenda a partir de 1 m³</span>
+          <h3><?= htmlspecialchars($produto['nome']) ?></h3>
+          <p><?= htmlspecialchars($produto['descricao']) ?></p>
+          <?php if (!empty($produto['destaque'])): ?>
+          <span class="product-tag"><?= htmlspecialchars($produto['destaque']) ?></span>
+          <?php endif; ?>
         </div>
       </article>
-
-      <article class="product-row product-row--alt">
-        <div class="product-info">
-          <h3>Vigas e caibros</h3>
-          <p>Estrutura para telhados e mezaninos, com seções padronizadas ou cortadas sob medida para o seu projeto.</p>
-          <span class="product-tag">Bitolas de 5x5 a 15x15 cm</span>
-        </div>
-      </article>
-
-      <article class="product-row">
-        <div class="product-info">
-          <h3>Tábuas para construção civil</h3>
-          <p>Tábuas para forma, guarda-corpo e fechamento, com secagem controlada para reduzir empeno em obra.</p>
-          <span class="product-tag">Espessuras de 15 a 30 mm</span>
-        </div>
-      </article>
-
-      <article class="product-row product-row--alt">
-        <div class="product-info">
-          <h3>Madeira para paletes</h3>
-          <p>Blocos, tacos e tábuas para paletização, com volume e prazo pensados para quem embala em escala.</p>
-          <span class="product-tag">Entrega programada mensal</span>
-        </div>
-      </article>
+      <?php endforeach; ?>
     </div>
+    <?php endif; ?>
   </section>
 
   <!-- CTA -->
