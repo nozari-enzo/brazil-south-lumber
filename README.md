@@ -24,6 +24,14 @@ O projeto está **em desenvolvimento** e busca criar uma presença digital para 
 * JavaScript
 * PHP
 
+## ⚙️ Como rodar localmente
+
+1. Coloque a pasta do projeto dentro de `htdocs` do XAMPP e inicie o Apache.
+2. Copie `mail-config.example.php` para `mail-config.php` e preencha com seus dados de SMTP (as instruções estão no próprio arquivo).
+3. Acesse `http://localhost/brazil-south-lumber/` no navegador.
+
+> ⚠️ O `mail-config.php` contém dados reais de acesso e está no `.gitignore` — nunca envie esse arquivo para o Git.
+
 ## 🎯 Objetivo
 
 Desenvolver um site profissional e responsivo para fortalecer a presença digital da serraria, facilitar a divulgação de seus produtos e proporcionar uma experiência simples para os clientes.
