@@ -35,6 +35,12 @@ O projeto está **em desenvolvimento** e busca criar uma presença digital para 
 
 > ⚠️ O `mail-config.php` e o `db-config.php` contêm dados reais de acesso e estão no `.gitignore` — nunca envie esses arquivos para o Git.
 
+## 🏢 Dados da serraria
+
+Telefone, WhatsApp, e-mail, endereço, horário, redes sociais e logo ficam todos em `empresa.php`. Os campos marcados com `A CONFIRMAR` ainda são provisórios — basta trocar os valores ali que o site inteiro é atualizado.
+
+Fotos ficam na pasta `img/`. Para a foto da seção "A serraria", substitua `img/serraria-vista-aerea.jpg` mantendo o mesmo nome.
+
 ## 🗄️ Banco de dados
 
 O site usa MySQL com duas tabelas:
