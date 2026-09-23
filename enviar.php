@@ -55,6 +55,8 @@ if (mb_strlen($mensagem) > 5000) {
 // campo-armadilha invisível (honeypot) contra robôs de spam
 if (!empty($_POST['campo_extra_kx91'])) {
     // finge sucesso pro robô, mas não envia nada de verdade
+    error_log('enviar.php: pedido descartado pelo honeypot (e-mail informado: ' . $email
+        . ', campo preenchido com: ' . mb_substr((string) $_POST['campo_extra_kx91'], 0, 60) . ')');
     responder(true, 'Pedido enviado com sucesso.');
 }
 
