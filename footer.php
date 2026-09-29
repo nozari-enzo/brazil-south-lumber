@@ -4,13 +4,12 @@ $empresa = empresa();
 ?>
 <footer class="site-footer">
   <div class="footer-inner">
-    <?php if ($empresa['logo']): ?>
-    <a href="index.php#inicio" class="site-logo site-logo--footer">
-      <img src="<?= htmlspecialchars($empresa['logo']) ?>" alt="<?= htmlspecialchars($empresa['nome']) ?>">
+    <a href="index.php#inicio" class="wordmark wordmark--footer">
+      <?php if ($empresa['logo']): ?>
+      <img src="<?= htmlspecialchars($empresa['logo']) ?>" alt="" class="wordmark-logo">
+      <?php endif; ?>
+      <span class="wordmark-text">Brazil South<span>Lumber</span></span>
     </a>
-    <?php else: ?>
-    <a href="index.php#inicio" class="wordmark wordmark--footer">Brazil South<span>Lumber</span></a>
-    <?php endif; ?>
     <nav class="footer-nav">
       <a href="index.php#sobre">A serraria</a>
       <a href="produtos.php">Produtos</a>

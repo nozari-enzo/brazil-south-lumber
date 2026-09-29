@@ -19,6 +19,6 @@ return [
     'smtp_password' => 'xxxx xxxx xxxx xxxx',   // a senha de app de 16 caracteres
     'from_email'    => 'seuemail@gmail.com',   // geralmente igual ao smtp_user
     'from_name'     => 'Site Brazil South Lumber',
-    'to_email'      => 'contato@brazilsouthlumber.com.br', // quem recebe os orçamentos
+    'to_email'      => 'administracao@brazilsouth.com.br', // quem recebe os orçamentos
     'to_name'       => 'Brazil South Lumber',
 ];

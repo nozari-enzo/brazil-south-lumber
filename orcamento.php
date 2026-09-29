@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Solicitar orçamento — Brazil South Lumber</title>
-<meta name="description" content="Peça um orçamento de madeira serrada, vigas, tábuas ou paletes com a Brazil South Lumber. Respondemos em até 1 dia útil.">
+<meta name="description" content="Peça um orçamento de madeira serrada bruta de pinus ou madeira para cercas, pallets e móveis com a Brazil South Lumber. Pedido mínimo de 3 containers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
     <div class="page-intro-inner">
       <a href="index.php" class="breadcrumb-back">← Início</a>
       <h1>Solicitar orçamento</h1>
-      <p>Conta pra gente o volume e a bitola que você precisa — respondemos em até 1 dia útil.</p>
+      <p>Conta pra gente o produto, as medidas e a quantidade que você precisa. O pedido mínimo é de 3 containers.</p>
     </div>
   </section>
 
@@ -61,7 +61,7 @@
         </div>
 
         <div class="form-row">
-          <label for="mensagem">O que você precisa? (produto, bitola, volume)</label>
+          <label for="mensagem">O que você precisa? (produto, medidas, quantidade de containers, porto de destino)</label>
           <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
           <span class="form-error" data-error-for="mensagem"></span>
         </div>

@@ -1,5 +1,5 @@
 // ============================================================
-// Serraria Bom Corte — interações da página
+// Brazil South Lumber — interações da página
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
