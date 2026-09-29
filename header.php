@@ -4,15 +4,12 @@ $empresa = empresa();
 ?>
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <?php if ($empresa['logo']): ?>
-    <a href="index.php#inicio" class="site-logo">
-      <img src="<?= htmlspecialchars($empresa['logo']) ?>" alt="<?= htmlspecialchars($empresa['nome']) ?>">
-    </a>
-    <?php else: ?>
     <a href="index.php#inicio" class="wordmark">
-      Brazil South<span>Lumber</span>
+      <?php if ($empresa['logo']): ?>
+      <img src="<?= htmlspecialchars($empresa['logo']) ?>" alt="" class="wordmark-logo">
+      <?php endif; ?>
+      <span class="wordmark-text">Brazil South<span>Lumber</span></span>
     </a>
-    <?php endif; ?>
 
     <nav class="main-nav" id="main-nav">
       <a href="index.php#sobre">A serraria</a>

@@ -26,24 +26,22 @@ CREATE TABLE IF NOT EXISTS produtos (
   id        INT UNSIGNED  NOT NULL AUTO_INCREMENT,
   nome      VARCHAR(120)  NOT NULL,
   descricao TEXT          NOT NULL,
-  destaque  VARCHAR(120)  NULL,               -- texto da etiqueta, ex.: "Bitolas de 5x5 a 15x15 cm"
+  destaque  VARCHAR(120)  NULL,               -- texto da etiqueta, ex.: "Pedido mínimo: 3 containers"
+  imagem    VARCHAR(255)  NULL,               -- caminho da foto, ex.: img/fotos/cercas-pacote.jpg
   ordem     INT           NOT NULL DEFAULT 0, -- menor aparece primeiro
   ativo     TINYINT(1)    NOT NULL DEFAULT 1, -- 0 = escondido do site
   PRIMARY KEY (id),
   UNIQUE KEY uq_produtos_nome (nome)
 ) ENGINE=InnoDB;
 
--- produtos que já estavam no site
-INSERT IGNORE INTO produtos (nome, descricao, destaque, ordem) VALUES
-  ('Madeira serrada',
-   'Pranchas e pranchões de pinus e eucalipto, verdes ou secos em estufa, cortados na medida do projeto.',
-   'Sob encomenda a partir de 1 m³', 1),
-  ('Vigas e caibros',
-   'Estrutura para telhados e mezaninos, com seções padronizadas ou cortadas sob medida para o seu projeto.',
-   'Bitolas de 5x5 a 15x15 cm', 2),
-  ('Tábuas para construção civil',
-   'Tábuas para forma, guarda-corpo e fechamento, com secagem controlada para reduzir empeno em obra.',
-   'Espessuras de 15 a 30 mm', 3),
-  ('Madeira para paletes',
-   'Blocos, tacos e tábuas para paletização, com volume e prazo pensados para quem embala em escala.',
-   'Entrega programada mensal', 4);
+-- produtos iniciais (mesmos de migracoes/001-produtos-reais.sql)
+INSERT IGNORE INTO produtos (nome, descricao, destaque, imagem, ordem) VALUES
+  ('Madeira serrada bruta de pinus',
+   'Tábuas e pranchas de pinus serradas brutas, secas em estufa e embaladas em pacotes cintados e identificados por lote.',
+   'Pedido mínimo: 3 containers', 'img/fotos/pacotes-madeira-serrada.jpg', 1),
+  ('Cercas de pinus',
+   'Tábuas para cerca com ponta chanfrada, cortadas em medida padronizada e empacotadas para exportação.',
+   'Pedido mínimo: 3 containers', 'img/fotos/cercas-pacote.jpg', 2),
+  ('Pallets',
+   'Peças de pinus para a montagem de pallets, cortadas na medida do pedido e secas em estufa.',
+   'Pedido mínimo: 3 containers', NULL, 3);
