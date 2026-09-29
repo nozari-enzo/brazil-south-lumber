@@ -78,14 +78,21 @@
     </div>
   </section>
 
-  <!-- FOTO DA PRODUÇÃO -->
-  <div class="facility-banner">
-    <img src="img/fotos/galpao-producao.jpg" width="1600" height="1200" loading="lazy"
-         alt="Equipe trabalhando no galpão de classificação e embalagem, com pilhas de tábuas de pinus.">
-    <div class="facility-caption">
-      <p><strong>Galpão de produção</strong> — classificação e embalagem da madeira antes da expedição.</p>
+  <!-- FOTOS DA PRODUÇÃO -->
+  <section class="facility-photos" aria-label="Fotos da produção">
+    <div class="facility-photos-inner">
+      <figure>
+        <img src="img/fotos/galpao-producao.jpg" width="1600" height="1200" loading="lazy"
+             alt="Equipe trabalhando no galpão de classificação e embalagem, com pilhas de tábuas de pinus.">
+        <figcaption><strong>Galpão de produção</strong> — classificação e embalagem da madeira.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fotos/madeira-pronta.jpg" width="720" height="540" loading="lazy"
+             alt="Pacotes de tábuas de pinus prontos no pátio, cintados para a expedição.">
+        <figcaption><strong>Madeira pronta</strong> — pacotes cintados aguardando a expedição.</figcaption>
+      </figure>
     </div>
-  </div>
+  </section>
 
   <!-- SERVIÇOS -->
   <section class="services" id="servicos">
