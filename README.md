@@ -29,7 +29,7 @@ O projeto está **em desenvolvimento** e busca criar uma presença digital para 
 
 1. Coloque a pasta do projeto dentro de `htdocs` do XAMPP e inicie o Apache.
 2. Copie `mail-config.example.php` para `mail-config.php` e preencha com seus dados de SMTP (as instruções estão no próprio arquivo).
-3. Crie o banco de dados MySQL rodando o script `database/schema.sql` (pelo phpMyAdmin, MySQL Workbench ou pelo terminal com `mysql -u root -p < database/schema.sql`).
+3. Crie o banco de dados MySQL rodando o script `database/schema.sql` (pelo phpMyAdmin, MySQL Workbench ou pelo terminal com `mysql -u root -p --default-character-set=utf8mb4 < database/schema.sql`: sem essa opção, o terminal do Windows grava os acentos corrompidos).
 4. Copie `db-config.example.php` para `db-config.php` e preencha com o usuário e a senha do seu MySQL.
 5. Acesse `http://localhost/brazil-south-lumber/` no navegador.
 
@@ -39,14 +39,16 @@ O projeto está **em desenvolvimento** e busca criar uma presença digital para 
 
 Telefone, WhatsApp, e-mail, endereço, horário, redes sociais e logo ficam todos em `empresa.php`. Os campos marcados com `A CONFIRMAR` ainda são provisórios — basta trocar os valores ali que o site inteiro é atualizado.
 
-Fotos ficam na pasta `img/`. Para a foto da seção "A serraria", substitua `img/serraria-vista-aerea.jpg` mantendo o mesmo nome.
+As fotos da serraria ficam em `img/fotos/` e o símbolo da logo em `img/logo-simbolo.png`. Para trocar uma foto, substitua o arquivo mantendo o mesmo nome.
 
 ## 🗄️ Banco de dados
 
 O site usa MySQL com duas tabelas:
 
 * `orcamentos` — cada pedido enviado pelo formulário fica salvo aqui, além de ir por e-mail. A coluna `email_enviado` mostra se o aviso por e-mail saiu.
-* `produtos` — o catálogo exibido em `produtos.php`. Para esconder um produto sem apagar, mude `ativo` para `0`; para mudar a ordem, use a coluna `ordem`.
+* `produtos` — o catálogo exibido em `produtos.php`. Para esconder um produto sem apagar, mude `ativo` para `0`; para mudar a ordem, use a coluna `ordem`; a coluna `imagem` guarda o caminho da foto (ex.: `img/fotos/cercas-pacote.jpg`).
+
+Se o seu banco foi criado antes dos produtos reais, rode uma vez `database/migracoes/001-produtos-reais.sql`. Ela esconde os produtos provisórios, cadastra os reais e cria a coluna `imagem`.
 
 ## 🎯 Objetivo
 
