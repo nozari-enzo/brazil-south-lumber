@@ -174,7 +174,7 @@
       </figure>
       <figure class="gallery-item">
         <img src="img/fotos/pacotes-madeira-serrada.jpg" width="1280" height="960" loading="lazy"
-             alt="Pacotes de tábuas de pinus cintados e identificados com a numeração do lote.">
+             alt="Pacotes de tábuas de pinus para móveis, cintados e identificados com a numeração do lote.">
         <figcaption>Pacotes cintados e identificados</figcaption>
       </figure>
       <figure class="gallery-item">
@@ -183,9 +183,9 @@
         <figcaption>Expedição</figcaption>
       </figure>
       <figure class="gallery-item gallery-item--tall">
-        <img src="img/fotos/cercas-empilhadas.jpg" width="960" height="1200" loading="lazy"
-             alt="Pilhas de cercas de pinus com ponta chanfrada.">
-        <figcaption>Cercas de pinus</figcaption>
+        <img src="img/fotos/madeira-pallet-empilhada.jpg" width="960" height="1200" loading="lazy"
+             alt="Pilhas de tábuas de pinus com cantos chanfrados, para a montagem de pallets.">
+        <figcaption>Madeira para pallets</figcaption>
       </figure>
       <figure class="gallery-item gallery-item--wide">
         <img src="img/fotos/vista-aerea-estufas.jpg" width="1800" height="1350" loading="lazy"

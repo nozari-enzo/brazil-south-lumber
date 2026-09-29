@@ -46,7 +46,7 @@ As fotos da serraria ficam em `img/fotos/` e o símbolo da logo em `img/logo-sim
 O site usa MySQL com duas tabelas:
 
 * `orcamentos` — cada pedido enviado pelo formulário fica salvo aqui, além de ir por e-mail. A coluna `email_enviado` mostra se o aviso por e-mail saiu.
-* `produtos` — o catálogo exibido em `produtos.php`. Para esconder um produto sem apagar, mude `ativo` para `0`; para mudar a ordem, use a coluna `ordem`; a coluna `imagem` guarda o caminho da foto (ex.: `img/fotos/cercas-pacote.jpg`).
+* `produtos` — o catálogo exibido em `produtos.php`. Para esconder um produto sem apagar, mude `ativo` para `0`; para mudar a ordem, use a coluna `ordem`; a coluna `imagem` guarda o caminho da foto (ex.: `img/fotos/madeira-cerca.jpg`).
 
 Se o seu banco foi criado antes dos produtos reais, rode uma vez `database/migracoes/001-produtos-reais.sql`. Ela esconde os produtos provisórios, cadastra os reais e cria a coluna `imagem`.
 

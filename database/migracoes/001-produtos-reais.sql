@@ -18,16 +18,16 @@ WHERE nome IN ('Madeira serrada', 'Vigas e caibros', 'Tábuas para construção 
 INSERT INTO produtos (nome, descricao, destaque, imagem, ordem) VALUES
   ('Madeira serrada bruta de pinus',
    'Tábuas e pranchas de pinus serradas brutas, secas em estufa e embaladas em pacotes cintados e identificados por lote.',
-   'Pedido mínimo: 3 containers', 'img/fotos/pacotes-madeira-serrada.jpg', 1),
-  ('Cercas de pinus',
-   'Tábuas para cerca com ponta chanfrada, cortadas em medida padronizada e empacotadas para exportação.',
-   'Pedido mínimo: 3 containers', 'img/fotos/cercas-pacote.jpg', 2),
+   'Pedido mínimo: 3 containers', 'img/fotos/galpao-producao.jpg', 1),
+  ('Madeira para cercas',
+   'Tábuas de pinus com cantos retos para cercas, cortadas em medida padronizada e empacotadas para exportação.',
+   'Pedido mínimo: 3 containers', 'img/fotos/madeira-cerca.jpg', 2),
   ('Madeira para pallets',
-   'Tábuas e peças de pinus para a montagem de pallets, cortadas na medida do pedido e secas em estufa.',
-   'Pedido mínimo: 3 containers', NULL, 3),
+   'Tábuas de pinus com cantos chanfrados para a montagem de pallets, cortadas na medida do pedido e secas em estufa.',
+   'Pedido mínimo: 3 containers', 'img/fotos/madeira-pallet-pacote.jpg', 3),
   ('Madeira para móveis',
-   'Tábuas de pinus secas em estufa para a fabricação de móveis, cortadas na medida do pedido.',
-   'Pedido mínimo: 3 containers', NULL, 4)
+   'Tábuas de pinus secas em estufa para a fabricação de móveis, em pacotes cintados e identificados por lote.',
+   'Pedido mínimo: 3 containers', 'img/fotos/pacotes-madeira-serrada.jpg', 4)
 ON DUPLICATE KEY UPDATE
   descricao = VALUES(descricao),
   destaque  = VALUES(destaque),
