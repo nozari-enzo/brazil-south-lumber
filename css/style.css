@@ -377,10 +377,10 @@ main > section {
   margin: 0 auto;
   display: grid;
   gap: var(--gap-lg);
-  align-items: start;
+  align-items: center;
 }
 @media (min-width: 900px) {
-  .about-inner { grid-template-columns: 1.3fr 0.7fr; }
+  .about-inner { grid-template-columns: 1fr 1fr; justify-content: space-between; }
 }
 
 .about-points {
@@ -411,13 +411,12 @@ main > section {
   box-shadow: 0 10px 30px rgba(36, 26, 18, 0.18);
   border-radius: var(--radius);
   overflow: hidden;
-  align-self: start;
 }
 .about-photo-frame img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  object-position: 55% 35%;
   display: block;
 }
 

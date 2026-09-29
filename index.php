@@ -72,8 +72,8 @@
         </ul>
       </div>
       <div class="about-photo-frame">
-        <img src="img/fotos/fachada-aerea.jpg" width="1800" height="1350" loading="lazy"
-             alt="Galpão principal da Brazil South Lumber visto do alto, com o silo marcado com as iniciais BSL.">
+        <img src="img/fotos/vista-aerea-completa.jpg" width="1400" height="1050" loading="lazy"
+             alt="Vista aérea de toda a Brazil South Lumber: pátio de toras, galpão de desdobro, estufas e galpões de expedição às margens da RS-020.">
       </div>
     </div>
   </section>
@@ -188,9 +188,9 @@
         <figcaption>Madeira para pallets</figcaption>
       </figure>
       <figure class="gallery-item gallery-item--wide">
-        <img src="img/fotos/vista-aerea-estufas.jpg" width="1800" height="1350" loading="lazy"
-             alt="Vista aérea do galpão de desdobro, das estufas e do pátio de toras.">
-        <figcaption>Desdobro, estufas e pátio de toras</figcaption>
+        <img src="img/fotos/fachada-aerea.jpg" width="1800" height="1350" loading="lazy"
+             alt="Galpão principal da Brazil South Lumber visto do alto, com o silo marcado com as iniciais BSL.">
+        <figcaption>Galpão principal</figcaption>
       </figure>
     </div>
   </section>
