@@ -22,7 +22,7 @@ $temFoto = (bool) array_filter(array_column($produtos, 'imagem'));
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Produtos — Brazil South Lumber</title>
-<meta name="description" content="Madeira serrada bruta de pinus, cercas e pallets da Brazil South Lumber. Secagem em estufa própria, entrega no porto ou exportação, pedido mínimo de 3 containers.">
+<meta name="description" content="Madeira serrada bruta de pinus e madeira para cercas, pallets e móveis da Brazil South Lumber. Secagem em estufa própria, entrega no porto ou exportação, pedido mínimo de 3 containers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@ $temFoto = (bool) array_filter(array_column($produtos, 'imagem'));
     <div class="page-intro-inner">
       <a href="index.php" class="breadcrumb-back">← Início</a>
       <h1>Produtos</h1>
-      <p>Trabalhamos só com pinus: madeira serrada bruta, cercas e pallets, secos em estufa e prontos para exportação.</p>
+      <p>Trabalhamos só com pinus: madeira serrada bruta e madeira para cercas, pallets e móveis, seca em estufa e prontos para exportação.</p>
     </div>
   </section>
 

@@ -22,9 +22,12 @@ INSERT INTO produtos (nome, descricao, destaque, imagem, ordem) VALUES
   ('Cercas de pinus',
    'Tábuas para cerca com ponta chanfrada, cortadas em medida padronizada e empacotadas para exportação.',
    'Pedido mínimo: 3 containers', 'img/fotos/cercas-pacote.jpg', 2),
-  ('Pallets',
-   'Peças de pinus para a montagem de pallets, cortadas na medida do pedido e secas em estufa.',
-   'Pedido mínimo: 3 containers', NULL, 3)
+  ('Madeira para pallets',
+   'Tábuas e peças de pinus para a montagem de pallets, cortadas na medida do pedido e secas em estufa.',
+   'Pedido mínimo: 3 containers', NULL, 3),
+  ('Madeira para móveis',
+   'Tábuas de pinus secas em estufa para a fabricação de móveis, cortadas na medida do pedido.',
+   'Pedido mínimo: 3 containers', NULL, 4)
 ON DUPLICATE KEY UPDATE
   descricao = VALUES(descricao),
   destaque  = VALUES(destaque),

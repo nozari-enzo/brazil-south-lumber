@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brazil South Lumber — Madeira serrada de pinus</title>
-<meta name="description" content="Brazil South Lumber: serraria de pinus em São Francisco de Paula - RS. Madeira serrada bruta, cercas e pallets, secos em estufa própria, com entrega no porto ou exportação.">
+<meta name="description" content="Brazil South Lumber: serraria de pinus em São Francisco de Paula - RS. Madeira serrada bruta e madeira para cercas, pallets e móveis, seca em estufa própria, com entrega no porto ou exportação.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -25,8 +25,8 @@
         <p class="hero-kicker">Serraria de pinus — São Francisco de Paula, RS</p>
         <h1>Madeira serrada de pinus, da tora ao porto.</h1>
         <p class="hero-lead">
-          Serramos, secamos em estufa e embalamos pinus bruto, cercas e madeira
-          para pallets, com entrega no porto ou exportação direta.
+          Serramos, secamos em estufa e embalamos pinus bruto e madeira para cercas,
+          pallets e móveis, com entrega no porto ou exportação direta.
         </p>
         <div class="hero-actions">
           <a href="orcamento.php" class="btn btn-primary">Pedir orçamento</a>
@@ -41,7 +41,7 @@
     </div>
 
     <dl class="hero-stats">
-      <div><dt>Pinus</dt><dd>serrado bruto, cercas e pallets</dd></div>
+      <div><dt>Pinus</dt><dd>para cercas, pallets e móveis</dd></div>
       <div><dt>Estufas</dt><dd>próprias, para secagem da madeira</dd></div>
       <div><dt>Porto</dt><dd>entrega no porto ou exportação</dd></div>
       <div><dt>3 containers</dt><dd>pedido mínimo</dd></div>
@@ -65,7 +65,7 @@
           identificados, pronto para seguir até o porto ou embarcar em container.
         </p>
         <ul class="about-points">
-          <li>Somente pinus: serrado bruto, cercas e pallets</li>
+          <li>Somente pinus: serrado bruto e madeira para cercas, pallets e móveis</li>
           <li>Estufas próprias para secagem da madeira</li>
           <li>Entrega no porto ou exportação direta</li>
           <li>Pedido mínimo de 3 containers</li>
@@ -105,7 +105,7 @@
       </article>
       <article class="service-card">
         <h3>Desdobro</h3>
-        <p>Linha de serras de fita que transforma a tora em tábuas, cercas e peças para pallets.</p>
+        <p>Linha de serras de fita que transforma a tora em tábuas e peças para cercas, pallets e móveis.</p>
       </article>
       <article class="service-card">
         <h3>Secagem em estufa</h3>
